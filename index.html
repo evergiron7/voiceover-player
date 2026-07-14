@@ -1,48 +1,181 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Creative Media Solutions | Voice Over Demos</title>
+
+<title>Creative Media Solutions | Spanish Voice Over Portfolio</title>
 
 <link rel="stylesheet" href="style.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 </head>
 
 <body>
 
-<div class="player">
+<div class="container">
 
-    <img src="images/logo.png" class="logo">
+    <!-- HEADER -->
 
-    <h1>Voice Over Demos</h1>
+    <header>
 
-    <h2 id="track-title">English Commercial Demo</h2>
+        <img src="images/logo.png" class="logo">
 
-    <audio id="audio"></audio>
+        <h1>Professional Spanish Voice Over Portfolio</h1>
 
-    <input
-        type="range"
-        id="progress"
-        value="0"
-        min="0"
-        max="100">
+        <p class="subtitle">
 
-    <div class="controls">
+            Commercials • TV • Radio • IVR • Corporate Narration
 
-        <button id="prev">⏮</button>
+        </p>
 
-        <button id="play">▶</button>
+    </header>
 
-        <button id="next">⏭</button>
 
-    </div>
+    <!-- PLAYER -->
 
-    <div id="playlist"></div>
+    <section class="player-card">
+
+        <div class="now-playing">
+
+            <span class="label">NOW PLAYING</span>
+
+            <h2 id="track-title">
+
+                Dell – PowerEdge Intel
+
+            </h2>
+
+            <p id="track-category">
+
+                Technology
+
+            </p>
+
+        </div>
+
+
+        <audio id="audio"></audio>
+
+
+        <!-- Progress -->
+
+        <div class="progress-area">
+
+            <span id="current-time">0:00</span>
+
+            <input
+            type="range"
+            id="progress"
+            value="0"
+            min="0"
+            max="100">
+
+            <span id="duration">0:00</span>
+
+        </div>
+
+
+        <!-- Controls -->
+
+        <div class="controls">
+
+            <button id="prev">
+
+                ⏮
+
+            </button>
+
+            <button id="play" class="play">
+
+                ▶
+
+            </button>
+
+            <button id="next">
+
+                ⏭
+
+            </button>
+
+        </div>
+
+
+        <!-- Volume -->
+
+        <div class="volume">
+
+            🔊
+
+            <input
+            type="range"
+            id="volume"
+            min="0"
+            max="100"
+            value="100">
+
+        </div>
+
+    </section>
+
+
+    <!-- PLAYLIST -->
+
+    <section class="playlist-card">
+
+        <h3>
+
+            Playlist
+
+        </h3>
+
+        <div id="playlist">
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <h3>
+
+            Need a Professional Spanish Voice?
+
+        </h3>
+
+        <p>
+
+            Commercials • TV • Radio • IVR • Corporate Narration
+
+        </p>
+
+        <a
+
+        href="https://www.creativemediasolutionsla.com/contact"
+
+        target="_blank"
+
+        class="contact-button">
+
+            Contact Creative Media Solutions
+
+        </a>
+
+    </footer>
 
 </div>
 
 <script src="script.js"></script>
 
 </body>
+
 </html>
