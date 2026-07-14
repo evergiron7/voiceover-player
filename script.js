@@ -1,164 +1,405 @@
-const songs = [
-{
-    title:"English Commercial Demo",
-    file:"audio/demo01.mp3"
-},
-{
-    title:"Spanish Commercial Demo",
-    file:"audio/demo02.mp3"
-},
-{
-    title:"Automotive Demo",
-    file:"audio/demo03.mp3"
-},
-{
-    title:"Retail Demo",
-    file:"audio/demo04.mp3"
-},
-{
-    title:"Medical Demo",
-    file:"audio/demo05.mp3"
-},
-{
-    title:"Corporate Narration",
-    file:"audio/demo06.mp3"
-},
-{
-    title:"Documentary Narration",
-    file:"audio/demo07.mp3"
-},
-{
-    title:"IVR / On Hold",
-    file:"audio/demo08.mp3"
-},
-{
-    title:"Promo Demo",
-    file:"audio/demo09.mp3"
-},
-{
-    title:"Radio Imaging",
-    file:"audio/demo10.mp3"
-},
-{
-    title:"TV Promo",
-    file:"audio/demo11.mp3"
-},
-{
-    title:"Character Demo",
-    file:"audio/demo12.mp3"
-}
-];
+/* ==========================================================
+   Creative Media Solutions
+   Professional Spanish Voice Over Portfolio
+   Version 1.0
+========================================================== */
 
-const audio = document.getElementById("audio");
-const playBtn = document.getElementById("play");
-const nextBtn = document.getElementById("next");
-const prevBtn = document.getElementById("prev");
-const title = document.getElementById("track-title");
-const playlist = document.getElementById("playlist");
-const progress = document.getElementById("progress");
+/* ---------- Google Font ---------- */
 
-let current = 0;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap');
 
-function loadSong(index){
+/* ---------- Variables ---------- */
 
-    audio.src = songs[index].file;
+:root{
 
-    title.innerHTML = songs[index].title;
+    --primary:#2F4E88;
+    --dark:#030A37;
 
-    document.querySelectorAll(".track").forEach(track=>track.classList.remove("active"));
+    --background:#F5F7FB;
+    --card:#FFFFFF;
 
-    document.getElementById("track"+index).classList.add("active");
+    --text:#202124;
+    --light:#6E7787;
+
+    --border:#DCE3F0;
+
+    --radius:18px;
+
+    --shadow:
+        0 12px 30px rgba(3,10,55,.08);
 
 }
 
-songs.forEach((song,index)=>{
+/* ---------- Reset ---------- */
 
-    let div=document.createElement("div");
+*{
 
-    div.className="track";
+    margin:0;
+    padding:0;
 
-    div.id="track"+index;
+    box-sizing:border-box;
 
-    div.innerHTML=song.title;
+}
 
-    div.onclick=function(){
+/* ---------- Body ---------- */
 
-        current=index;
+body{
 
-        loadSong(current);
+    font-family:Montserrat,sans-serif;
 
-        audio.play();
+    background:var(--background);
 
-        playBtn.innerHTML="⏸";
+    color:var(--text);
+
+    padding:50px 20px;
+
+}
+
+/* ---------- Main Container ---------- */
+
+.container{
+
+    width:100%;
+
+    max-width:1280px;
+
+    margin:auto;
+
+}
+
+/* ---------- Header ---------- */
+
+header{
+
+    text-align:center;
+
+    margin-bottom:45px;
+
+}
+
+.logo{
+
+    width:min(700px,90%);
+
+    display:block;
+
+    margin:auto;
+
+}
+
+h1{
+
+    color:var(--dark);
+
+    font-size:2.2rem;
+
+    font-weight:700;
+
+    margin-top:30px;
+
+}
+
+.subtitle{
+
+    margin-top:12px;
+
+    color:var(--light);
+
+    font-size:1.05rem;
+
+}
+
+/* ---------- Cards ---------- */
+
+.player-card,
+.playlist-card,
+footer{
+
+    background:var(--card);
+
+    border-radius:var(--radius);
+
+    box-shadow:var(--shadow);
+
+    padding:35px;
+
+    margin-bottom:30px;
+
+}
+
+/* ---------- Player ---------- */
+
+.label{
+
+    display:inline-block;
+
+    font-size:.75rem;
+
+    letter-spacing:2px;
+
+    color:var(--primary);
+
+    font-weight:700;
+
+    margin-bottom:12px;
+
+    text-transform:uppercase;
+
+}
+
+#track-title{
+
+    color:var(--dark);
+
+    font-size:2rem;
+
+    font-weight:700;
+
+}
+
+#track-category{
+
+    margin-top:8px;
+
+    color:var(--light);
+
+}
+
+/* ---------- Progress ---------- */
+
+.progress-area{
+
+    display:grid;
+
+    grid-template-columns:60px 1fr 60px;
+
+    gap:15px;
+
+    align-items:center;
+
+    margin-top:35px;
+
+}
+
+#progress{
+
+    width:100%;
+
+    accent-color:var(--primary);
+
+    cursor:pointer;
+
+}
+
+/* ---------- Controls ---------- */
+
+.controls{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:20px;
+
+    margin:35px 0;
+
+}
+
+.controls button{
+
+    border:none;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+}
+
+.controls button:hover{
+
+    transform:translateY(-2px);
+
+}
+
+.play{
+
+    width:70px;
+
+    height:70px;
+
+    border-radius:50%;
+
+    background:var(--primary);
+
+    color:white;
+
+    font-size:28px;
+
+    box-shadow:0 8px 20px rgba(47,78,136,.30);
+
+}
+
+#prev,
+#next{
+
+    width:52px;
+
+    height:52px;
+
+    border-radius:50%;
+
+    background:#EDF2FA;
+
+    color:var(--primary);
+
+    font-size:22px;
+
+}
+
+/* ---------- Volume ---------- */
+
+.volume{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+}
+
+#volume{
+
+    flex:1;
+
+    accent-color:var(--primary);
+
+}
+
+/* ---------- Playlist ---------- */
+
+.playlist-card h3{
+
+    color:var(--dark);
+
+    margin-bottom:20px;
+
+}
+
+.track{
+
+    padding:18px 20px;
+
+    border:1px solid var(--border);
+
+    border-radius:14px;
+
+    margin-bottom:14px;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+}
+
+.track:hover{
+
+    background:#F3F7FD;
+
+    border-color:var(--primary);
+
+    transform:translateX(4px);
+
+}
+
+.track.active{
+
+    border-left:6px solid var(--primary);
+
+    background:#EEF5FF;
+
+}
+
+/* ---------- Footer ---------- */
+
+footer{
+
+    text-align:center;
+
+}
+
+footer h3{
+
+    color:var(--dark);
+
+    margin-bottom:10px;
+
+}
+
+footer p{
+
+    color:var(--light);
+
+    margin-bottom:25px;
+
+}
+
+.contact-button{
+
+    display:inline-block;
+
+    background:var(--primary);
+
+    color:white;
+
+    text-decoration:none;
+
+    padding:16px 34px;
+
+    border-radius:50px;
+
+    font-weight:600;
+
+    transition:.25s;
+
+}
+
+.contact-button:hover{
+
+    background:var(--dark);
+
+}
+
+/* ---------- Mobile ---------- */
+
+@media(max-width:768px){
+
+    body{
+
+        padding:25px 15px;
 
     }
 
-    playlist.appendChild(div);
+    h1{
 
-});
+        font-size:1.6rem;
 
-loadSong(current);
+    }
 
-playBtn.onclick=function(){
+    #track-title{
 
-    if(audio.paused){
+        font-size:1.5rem;
 
-        audio.play();
+    }
 
-        playBtn.innerHTML="⏸";
+    .player-card,
+    .playlist-card,
+    footer{
 
-    }else{
-
-        audio.pause();
-
-        playBtn.innerHTML="▶";
+        padding:22px;
 
     }
 
 }
-
-nextBtn.onclick=function(){
-
-    current++;
-
-    if(current>=songs.length) current=0;
-
-    loadSong(current);
-
-    audio.play();
-
-    playBtn.innerHTML="⏸";
-
-}
-
-prevBtn.onclick=function(){
-
-    current--;
-
-    if(current<0) current=songs.length-1;
-
-    loadSong(current);
-
-    audio.play();
-
-    playBtn.innerHTML="⏸";
-
-}
-
-audio.addEventListener("timeupdate",()=>{
-
-    progress.value=(audio.currentTime/audio.duration)*100 || 0;
-
-});
-
-progress.addEventListener("input",()=>{
-
-    audio.currentTime=(progress.value/100)*audio.duration;
-
-});
-
-audio.addEventListener("ended",()=>{
-
-    nextBtn.click();
-
-});
