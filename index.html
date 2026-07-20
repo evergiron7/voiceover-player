@@ -3,17 +3,12 @@
 
 <head>
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Creative Media Solutions | Spanish Voice Over Portfolio</title>
+    <title>Creative Media Solutions | Spanish Voice Over Portfolio</title>
 
-<link rel="stylesheet" href="style.css">
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 
 </head>
 
@@ -21,161 +16,212 @@
 
 <div class="container">
 
-    <!-- HEADER -->
+    <!-- ==========================================
+         HEADER
+    =========================================== -->
 
     <header>
 
-        <img src="images/logo.png" class="logo">
+        <img src="images/logo.png"
+             alt="Creative Media Solutions"
+             class="logo">
 
-        <h1>Professional Spanish Voice Over Portfolio</h1>
+        <h1 class="hero-title">
+            Professional Spanish Voice Talent
+        </h1>
 
-        <p class="subtitle">
+        <p class="hero-subtitle">
+    Native Spanish Voice Talent specializing in Neutral Latin American Accent for television, radio, corporate narration and IVR.
+</p>
 
-            Commercials • TV • Radio • IVR • Corporate Narration
+        <div class="hero-services">
 
-        </p>
+            <span>TV Commercials</span>
+            <span>Radio Commercials</span>
+            <span>TV Promos</span>
+            <span>Radio Imaging</span>
+            <span>IVR</span>
+            <span>Corporate Narration</span>
+
+        </div>
 
     </header>
 
-
-    <!-- PLAYER -->
+    <!-- ==========================================
+         PLAYER
+    =========================================== -->
 
     <section class="player-card">
 
-        <div class="now-playing">
+        <div class="player-label">
 
-            <span class="label">NOW PLAYING</span>
-
-            <h2 id="track-title">
-
-                Dell – PowerEdge Intel
-
-            </h2>
-
-            <p id="track-category">
-
-                Technology
-
-            </p>
+            CURRENTLY PLAYING
 
         </div>
 
+        <h2 class="now-playing" id="demoTitle">
 
-        <audio id="audio"></audio>
+    Dell – PowerEdge Intel
 
+</h2>
 
-        <!-- Progress -->
+<p class="demo-type" id="demoCategory">
 
-        <div class="progress-area">
+  Spanish TV Commercial
 
-            <span id="current-time">0:00</span>
+</p>
+
+<div class="equalizer" id="equalizer">
+
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+
+</div>
+
+<div class="player-divider"></div>
+
+<div class="progress-area">
 
             <input
-            type="range"
-            id="progress"
-            value="0"
-            min="0"
-            max="100">
+                id="progress"
+                class="progress-bar"
+                type="range"
+                min="0"
+                max="100"
+                value="0">
 
-            <span id="duration">0:00</span>
+            <div class="time-display">
 
-        </div>
+                <span id="currentTime">
+                    0:00
+                </span>
 
+                <span id="duration">
+                    0:00
+                </span>
 
-        <!-- Controls -->
-
-        <div class="controls">
-
-            <button id="prev">
-
-                ⏮
-
-            </button>
-
-            <button id="play" class="play">
-
-                ▶
-
-            </button>
-
-            <button id="next">
-
-                ⏭
-
-            </button>
+            </div>
 
         </div>
 
+ <div class="controls">
 
-        <!-- Volume -->
+    <button id="prevBtn" aria-label="Previous">
+
+        <svg viewBox="0 0 24 24" width="28" height="28">
+            <path fill="currentColor"
+                d="M6 5h2v14H6zm3.5 7l8.5 7V5z"/>
+        </svg>
+
+    </button>
+
+    <button class="play-btn" id="playBtn" aria-label="Play">
+
+        <svg id="playIcon" viewBox="0 0 24 24" width="34" height="34">
+            <path fill="currentColor"
+                d="M8 5v14l11-7z"/>
+        </svg>
+
+    </button>
+
+    <button id="nextBtn" aria-label="Next">
+
+        <svg viewBox="0 0 24 24" width="28" height="28">
+            <path fill="currentColor"
+                d="M16 5h2v14h-2zM6 5v14l8.5-7z"/>
+        </svg>
+
+    </button>
+
+</div>
 
         <div class="volume">
 
-            🔊
+            <span>Volume</span>
 
             <input
-            type="range"
-            id="volume"
-            min="0"
-            max="100"
-            value="100">
+                id="volume"
+                class="volume-slider"
+                type="range"
+                min="0"
+                max="100"
+                value="100">
 
         </div>
 
     </section>
 
+    <!-- ==========================================
+         PLAYLIST
+    =========================================== -->
 
-    <!-- PLAYLIST -->
+    <section>
 
-    <section class="playlist-card">
+        <h2 class="section-title">
 
-        <h3>
+            Voice Over Demos
 
-            Playlist
+        </h2>
 
-        </h3>
-
-        <div id="playlist">
-
-        </div>
-
-    </section>
-
-
-    <!-- FOOTER -->
-
-    <footer>
-
-        <h3>
-
-            Need a Professional Spanish Voice?
-
-        </h3>
-
-        <p>
-
-            Commercials • TV • Radio • IVR • Corporate Narration
-
-        </p>
-
-        <a
-
-        href="https://www.creativemediasolutionsla.com/contact"
-
-        target="_blank"
-
-        class="contact-button">
-
-            Contact Creative Media Solutions
-
-        </a>
-
-    </footer>
-
+       <div id="playlist">
+    <!-- JavaScript will insert cards here -->
 </div>
+
+    </section>
+
+    <!-- ==========================================
+         FOOTER
+    =========================================== -->
+
+    <footer class="site-footer">
+
+    <h2>
+        Looking for a Professional Spanish Voice
+        <br>
+        with a Neutral Latin American Accent?
+    </h2>
+
+    <p class="footer-services">
+
+        TV Commercials • Radio Commercials • TV Promos •
+        Radio Imaging • Corporate Narration • IVR • eLearning
+
+    </p>
+
+    <p class="footer-company">
+
+        Creative Media Solutions
+
+    </p>
+
+    <a href="https://www.creativemediasolutionsla.com"
+       target="_blank"
+       class="footer-button">
+
+        Let's Work Together
+
+    </a>
+
+</footer>
+</div>
+
+<audio id="audio"></audio>
 
 <script src="script.js"></script>
 
 </body>
-
 </html>
