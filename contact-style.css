@@ -1,0 +1,461 @@
+/* ===========================
+   Creative Media Solutions
+   Contact Form
+=========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+
+    font-family:Arial, Helvetica, sans-serif;
+
+    background:linear-gradient(
+        135deg,
+        #f9fafb 0%,
+        #fdfeff 100%
+    );
+
+    min-height:100vh;
+
+    color:#17397E;
+
+    padding:60px 20px;
+
+}
+
+.contact-container{
+
+    max-width:960px;
+
+    margin:auto;
+
+}
+.contact-card{
+
+    background:#8eb9ed;
+
+    border-radius:18px;
+
+    padding:50px;
+
+    box-shadow:
+0 20px 60px rgba(0,0,0,.12);
+
+}
+
+.contact-card h1{
+
+    text-align:center;
+
+    font-size:48px;
+
+    font-weight:700;
+
+    line-height:1.1;
+
+    color:#17397E;
+
+    margin-bottom:18px;
+
+}
+
+.subtitle{
+
+    text-align:center;
+
+    max-width:720px;
+
+    margin:0 auto 50px;
+
+    font-size:24px;
+
+    color:#000000;
+
+    line-height:1.8;
+
+}
+
+.row{
+
+    display:flex;
+
+    gap:25px;
+
+    margin-bottom:25px;
+
+}
+
+.field{
+
+    flex:1;
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+label{
+
+    margin-bottom:8px;
+
+    font-weight:bold;
+
+    color:#17397E;
+
+}
+
+input,
+select,
+textarea{
+
+    padding:18px;
+
+    border:1px solid #d7dce5;
+
+    border-radius:12px;
+
+    font-size:20px;
+
+    transition:.3s;
+
+    outline:none;
+
+    background:white;
+
+}
+
+input:focus,
+select:focus,
+textarea:focus{
+
+    border-color:#2EA6DF;
+
+    box-shadow:0 0 0 4px rgba(46,166,223,.15);
+
+}
+
+textarea{
+
+    resize:vertical;
+
+    min-height:180px;
+
+}
+
+button{
+
+    width:100%;
+
+    padding:20px;
+
+    border:none;
+
+    border-radius:14px;
+
+    background:linear-gradient(
+        135deg,
+        #2EA6DF,
+        #1B8FCC
+    );
+
+    color:rgb(251, 246, 246);
+
+    font-size:22px;
+
+    font-weight:700;
+
+    letter-spacing:.8px;
+
+    cursor:pointer;
+
+    transition:.35s;
+
+    box-shadow:
+        0 12px 30px
+        rgba(46,166,223,.30);
+
+}
+
+button:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:
+        0 20px 45px
+        rgba(46,166,223,.40);
+
+}
+
+button:active{
+
+    transform:scale(.98);
+
+}
+
+button:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:0 16px 35px rgba(46,166,223,.35);
+
+}
+button:active{
+
+    transform:scale(.98);
+
+}
+
+@media(max-width:768px){
+
+.row{
+
+    flex-direction:column;
+
+}
+
+.contact-card{
+
+    padding:35px;
+
+}
+
+.contact-card h1{
+
+    font-size:34px;
+
+}
+
+.subtitle{
+
+    font-size:20px;
+
+
+}
+.checkbox-field{
+
+    margin-top:25px;
+    margin-bottom:30px;
+
+}
+
+.checkbox-label{
+
+    display:flex;
+    align-items:flex-start;
+    gap:12px;
+
+    font-size:20px;
+
+    color:#555;
+
+    line-height:1.5;
+
+}
+
+.checkbox-label input{
+
+    margin-top:3px;
+
+    width:24px;
+    height:24px;
+
+    cursor:pointer;
+
+}
+.contact-card{
+
+    animation:fadeUp .7s ease;
+
+}
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(40px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+#successMessage{
+
+    display:none;
+
+    text-align:center;
+
+    padding:50px;
+
+}
+
+#successMessage h2{
+
+    color:#17397E;
+
+    margin-bottom:20px;
+
+}
+
+#successMessage p{
+
+    color:#666;
+
+    line-height:1.8;
+
+}
+.hero-banner{
+
+    margin:-50px -50px 40px;
+
+    overflow:hidden;
+
+    border-radius:18px 18px 0 0;
+
+}
+
+.hero-banner img{
+
+    display:block;
+
+    width:100%;
+
+    height:auto;
+
+}
+#successMessage{
+
+    display:none;
+
+    text-align:center;
+
+    padding:40px 20px;
+
+    animation:fadeUp .6s ease;
+
+}
+
+.success-icon{
+
+    width:90px;
+
+    height:90px;
+
+    margin:0 auto 25px;
+
+    border-radius:50%;
+
+    background:#2EA6DF;
+
+    color:white;
+
+    font-size:48px;
+
+    line-height:90px;
+
+    font-weight:bold;
+
+}
+
+#successMessage h2{
+
+    font-size:42px;
+
+    color:#17397E;
+
+    margin-bottom:20px;
+
+}
+
+#successMessage p{
+
+    font-size:22px;
+
+    color:#666;
+
+    line-height:1.8;
+
+    margin-bottom:35px;
+
+}
+/* ===========================
+   CMS Logo
+=========================== */
+
+.logo-container{
+
+    position: relative;
+
+    display: flex;
+
+    justify-content: center;
+
+    margin-bottom: 30px;
+
+}
+
+.logo-container::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:140px;
+
+    height:140px;
+
+    background:radial-gradient(
+        rgba(46,166,223,.18),
+        transparent 70%
+    );
+
+    border-radius:50%;
+
+    top:50%;
+
+    left:50%;
+
+    transform:translate(-50%,-50%);
+
+    z-index:0;
+
+}
+
+.logo-icon{
+    width:70px !important;
+    height:auto !important;
+    border:3px solid red;
+}
+
+.logo-icon:hover{
+
+    transform:scale(1.05);
+
+}
+input:focus,
+select:focus,
+textarea:focus{
+
+    outline:none;
+
+    border-color:#2EA6DF;
+
+    box-shadow:0 0 0 4px rgba(46,166,223,.15);
+
+    transition:.25s;
+
+}
