@@ -436,9 +436,9 @@ button:active{
 }
 
 .logo-icon{
-    width:70px !important;
+    width:170px !important;
     height:auto !important;
-    border:3px solid red;
+   
 }
 
 .logo-icon:hover{
