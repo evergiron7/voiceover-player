@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Contact Us | Creative Media Solutions</title>
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="contact-container">
+
+    <div class="contact-card">
+
+        <h1>GET IN TOUCH</h1>
+
+        <p class="subtitle">
+            We'd love to hear about your next project.
+            Fill out the form below and we'll contact you as soon as possible.
+        </p>
+
+        <form
+            id="contactForm"
+            action="https://formspree.io/f/xlgqnyyd"
+            method="POST">
+
+            <div class="row">
+
+                <div class="field">
+                    <label>First Name *</label>
+                    <input
+                        type="text"
+                        name="first_name"
+                        required>
+                </div>
+
+                <div class="field">
+                    <label>Last Name *</label>
+                    <input
+                        type="text"
+                        name="last_name"
+                        required>
+                </div>
+
+            </div>
+
+            <div class="row">
+
+                <div class="field">
+                    <label>Email *</label>
+                    <input
+                        type="email"
+                        name="email"
+                        required>
+                </div>
+
+                <div class="field">
+                    <label>Phone (Optional)</label>
+                    <input
+                        type="tel"
+                        name="phone">
+                </div>
+
+            </div>
+
+            <div class="field">
+
+                <label>Company (Optional)</label>
+
+                <input
+                    type="text"
+                    name="company">
+
+            </div>
+
+            <div class="field">
+
+                <label>Service Needed *</label>
+
+                <select
+                    name="service"
+                    required>
+
+                    <option value="">Select a Service</option>
+
+                    <option>TV Commercial Production</option>
+                    <option>Radio Commercial Production</option>
+                    <option>Video Production</option>
+                    <option>Social Media Video Content</option>
+                    <option>Professional Voice Over</option>
+                    <option>Photography</option>
+                    <option>Graphic Design</option>
+                    <option>Audio Production</option>
+                    <option>Website Design</option>
+                    <option>Marketing Consultation</option>
+                    <option>Other</option>
+
+                </select>
+
+            </div>
+
+            <div class="field">
+
+                <label>Tell us about your project *</label>
+
+                <textarea
+                    name="message"
+                    rows="7"
+                    required></textarea>
+
+            </div>
+
+            <input
+                type="hidden"
+                name="_subject"
+                value="New Website Inquiry - Creative Media Solutions">
+
+            <button
+                type="submit"
+                id="submitButton">
+
+                SEND MESSAGE
+
+            </button>
+
+        </form>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
