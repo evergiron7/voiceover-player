@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Contact Us | Creative Media Solutions</title>
+
+<link rel="stylesheet" href="contact-style.css">
+</head>
+
+<body>
+
+<div class="contact-container">
+
+    <div class="contact-card">
+
+   <div class="logo-container">
+    <img src="images/cms-icon.png"
+         alt="Creative Media Solutions"
+         class="logo-icon">
+</div>
+        <h1>Let's Create Something Great Together</h1>
+
+        <p class="subtitle">
+    Whether you need a TV commercial, professional voice-over,
+    video production, photography, or creative marketing services,
+    we'd love to hear about your project.
+    Tell us a little about your vision and we'll get back to you as soon as possible.
+</p>
+
+        <form
+            id="contactForm"
+            action="https://formspree.io/f/xlgqnyyd"
+            method="POST">
+
+            <div class="row">
+
+                <div class="field">
+                    <label>First Name *</label>
+                    <input
+                        type="text"
+                        name="first_name"
+                        required>
+                </div>
+
+                <div class="field">
+                    <label>Last Name *</label>
+                    <input
+                        type="text"
+                        name="last_name"
+                        required>
+                </div>
+
+            </div>
+
+            <div class="row">
+
+                <div class="field">
+                    <label>Email *</label>
+                    <input
+                        type="email"
+                        name="email"
+                        required>
+                </div>
+
+                <div class="field">
+                    <label>Phone (Optional)</label>
+                    <input
+                        type="tel"
+                        name="phone">
+                </div>
+
+            </div>
+
+            <div class="field">
+
+                <label>Company (Optional)</label>
+
+                <input
+                    type="text"
+                    name="company">
+
+            </div>
+
+            <div class="field">
+
+                <label>What can we help you create? *</label>
+
+                <select
+                    name="service"
+                    required>
+
+                    <option value="">Select a Service</option>
+
+<option>TV Commercial Production</option>
+<option>Radio Commercial Production</option>
+<option>Video Production</option>
+<option>Social Media Video Content</option>
+<option>Professional Voice Over</option>
+<option>Photography</option>
+<option>Graphic Design</option>
+<option>Website Design</option>
+<option>Marketing Consultation</option>
+<option>Other</option>
+
+                </select>
+
+            </div>
+
+            <div class="field">
+
+                <label>Tell us about your vision *</label>
+
+                <textarea
+                    name="message"
+                    rows="7"
+                    required></textarea>
+
+            </div>
+
+            <input
+                type="hidden"
+                name="_subject"
+                value="New Website Inquiry - Creative Media Solutions">
+
+                <div class="checkbox-field">
+
+    <label class="checkbox-label">
+
+        <input
+            type="checkbox"
+            name="consent"
+            required>
+
+        I agree to be contacted by Creative Media Solutions regarding my project inquiry.
+
+    </label>
+
+</div>
+            <button
+                type="submit"
+                id="submitButton">
+
+                SEND MESSAGE
+
+            </button>
+
+        </form>
+
+      
+
+    </button>
+
+</div>
+        <div id="successMessage" style="display:none;">
+
+    <h2>🎉 Thank You!</h2>
+
+    <p>
+
+        Your message has been sent successfully.
+
+        <br><br>
+
+        Thank you for contacting Creative Media Solutions.
+
+        We'll review your project details and get back to you as soon as possible.
+
+    </p>
+
+</div>
+
+    </div>
+
+</div>
+
+<script src="contact-script.js"></script>
+
+</body>
+</html>
